@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+    <section class="greeting">
+    <div x-data="greet()">
+        <h1>Greet Widget</h1>
+        <em><p x-text="greet"></p></em>
+        <input type="text" class="inputBox" x-model="name" placeholder="Enter your name">
+        <button @click="greetMessage">Click to Greet</button>
+    </div>
+    </section>
+    <section class="transportfees">
+        <h1>TransportFee Widget</h1>
+        <div x-data="workShift()">
+            
+            <h4>Select the shift you are working below:</h4>
+            <form >
+            <label >
+                <input type="radio"  name="shift" value="morning" x-model="shift">morning
+            </label><br>
+            <label >
+                <input type="radio"  name="shift" value="afternoon" x-model="shift">afternoon
+            </label><br>
+            <label >
+                <input type="radio" name="shift" value="nightshift" x-model="shift">nightshift
+            </label>
+        </form>
+<p x-text="transportfee"></p>   
+        </div>
+    </section>
+    <section class="phonebill">
+        <div x-data="phoneBill()">
+            <h1>Total Phone Bill</h1>
+            <h4>Enter the data string ("call, sms, call, sms, sms"):</h4>
+            <input type="text" x-model="inputString" placeholder="Enter the data string">
+            <button @click="bill">Bill</button>
+            <p x-text="result"></p>
+        </div>
+    </section>
+    <section class="airtime">
+        <div x-data="airtime()">
+            <h1>Airtime</h1>
+            <h4>Enter the projected usage ("call, sms, call, sms, sms"):</h4>
+            <input type="text" x-model="projectedUsage" placeholder="Enter the projected usage">
+        <h4>Enter available airtime:</h4>
+        <input type="number" x-model.number="availableAirtime" placeholder="Enter available airtime">
+        
+        <button @click="RemainingAirtime"> Remaining Airtime</button>
+    <p x-text="result"></p>
+    </div>
+</div>
+    </section>
+    <script src="airtime.js"></script>
+    <script src="greet.js"></script>
+    <script src="phoneBill.js"></script>
+    <script src="transportfee.js"></script>
+    
+   
+
+</body>
+</html>

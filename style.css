@@ -1,0 +1,56 @@
+.container {
+    margin: 0 auto;
+}
+button:hover {
+   border: 1px solid lightseagreen;
+   background-color: white;
+   color: black;
+
+}
+button {
+    cursor: pointer;
+    color: white; 
+    background-color: lightseagreen;
+    border: 1px solid lightseagreen;
+    border-radius: 2px;
+}
+/* section :hover {
+    background-color: lightseagreen;
+} */
+
+p {
+    color: lightseagreen;
+    font-weight: bolder;
+}
+
+.greeting {
+    text-align: center;
+
+    padding: 2em;
+    border: 2px solid lightseagreen;
+    margin-bottom: 2em;
+}
+
+.transportfees {
+    text-align: center;
+
+    padding: 2em;
+    border: 2px solid lightseagreen;
+    margin-bottom: 2em;
+}
+
+.phonebill {
+    text-align: center;
+
+    padding: 2em;
+    border: 2px solid lightseagreen;
+    margin-bottom: 2em;
+}
+
+.airtime {
+    text-align: center;
+
+    padding: 2em;
+    border: 2px solid lightseagreen;
+    margin-bottom: 2em;
+}
